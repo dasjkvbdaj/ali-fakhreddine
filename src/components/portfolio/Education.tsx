@@ -9,29 +9,29 @@ export const Education = () => (
     eyebrow="Education" 
     title="Academic background"
   >
-    <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
-      <div className="flex items-start gap-4">
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-primary to-accent text-primary-foreground shadow-glow">
-          <GraduationCap className="h-5 w-5" />
+    <div className="portfolio-card p-8">
+      <div className="flex items-start gap-6">
+        <span className="icon-container h-12 w-12 bg-primary text-primary-foreground">
+          <GraduationCap className="h-6 w-6" />
         </span>
-        <div className="flex-1">
+        <div className="flex-1 min-w-0">
           <div className="flex flex-wrap items-baseline justify-between gap-2">
-            <h3 className="text-lg font-semibold">
+            <h3 className="text-xl font-bold tracking-tight">
               {education.school}
             </h3>
-            <span className="text-xs text-muted-foreground">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/60">
               {education.period}
             </span>
           </div>
-          <p className="mt-1 text-sm text-foreground/90 font-medium">
+          <p className="mt-2 text-base font-semibold text-accent">
             {education.degree}
           </p>
 
-          <p className="text-xs text-muted-foreground">
+          <p className="text-sm text-muted-foreground">
             {education.location}
           </p>
-          <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs font-medium">
-            GPA <span className="text-gradient font-semibold">{education.gpa}</span>
+          <div className="mt-5 inline-flex items-center gap-2 rounded-lg border border-border bg-secondary/30 px-3 py-1.5 text-xs font-bold uppercase tracking-wider">
+            GPA <span className="text-primary">{education.gpa}</span>
           </div>
         </div>
       </div>

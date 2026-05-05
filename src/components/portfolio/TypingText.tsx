@@ -40,7 +40,7 @@ export const TypingText = ({
     const runCycle = (isFirst: boolean) => {
       let i = 0;
 
-      // ── TYPE ──────────────────────────────────────
+
       const typeInterval = setInterval(() => {
         if (!alive) { clearInterval(typeInterval); return; }
         i++;
@@ -49,11 +49,11 @@ export const TypingText = ({
         if (i >= text.length) {
           clearInterval(typeInterval);
 
-          // ── PAUSE (fully typed) ───────────────────
+
           setTimeout(() => {
             if (!alive) return;
 
-            // ── ERASE ────────────────────────────────
+
             const eraseInterval = setInterval(() => {
               if (!alive) { clearInterval(eraseInterval); return; }
               i--;
@@ -62,19 +62,20 @@ export const TypingText = ({
               if (i <= 0) {
                 clearInterval(eraseInterval);
 
-                // ── PAUSE (blank) then repeat ─────────
                 setTimeout(() => {
                   if (!alive) return;
                   runCycle(false);
                 }, 500);
               }
-            }, Math.max(speed * 0.45, 10)); // erase slightly faster
-          }, 2000); // hold fully-typed text for 2 s
+            }, Math.max(speed * 0.45, 10));
+
+          }, 2000);
+
         }
       }, speed);
     };
 
-    // Delay only the very first cycle
+
     delayTimer = setTimeout(() => {
       if (!alive) return;
       runCycle(true);

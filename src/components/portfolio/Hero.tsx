@@ -1,70 +1,32 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail, ChevronDown } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
-import { profile } from "@/data/portfolio";
-import { useState, useEffect } from "react";
 import { FallingPattern } from "@/components/ui/falling-pattern";
+import { profile } from "@/data/portfolio";
 
-/* ─── Typewriter Component ──────────────── */
-const Typewriter = ({ phrases, className }: { phrases: string[]; className?: string }) => {
-  const [phraseIdx, setPhraseIdx] = useState(0);
-  const [displayed, setDisplayed] = useState("");
-  const [deleting, setDeleting] = useState(false);
-  const [blink, setBlink] = useState(true);
-
-  useEffect(() => {
-    const current = phrases[phraseIdx];
-    let timeout: NodeJS.Timeout;
-    const typeSpeed = 80;
-    const deleteSpeed = 40;
-
-    if (!deleting && displayed.length < current.length) {
-      timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), typeSpeed);
-    } else if (!deleting && displayed.length === current.length) {
-      timeout = setTimeout(() => setDeleting(true), 2000);
-    } else if (deleting && displayed.length > 0) {
-      timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length - 1)), deleteSpeed);
-    } else if (deleting && displayed.length === 0) {
-      setDeleting(false);
-      setPhraseIdx((phraseIdx + 1) % phrases.length);
-    }
-
-    return () => clearTimeout(timeout);
-  }, [displayed, deleting, phraseIdx, phrases]);
-
-  useEffect(() => {
-    const interval = setInterval(() => setBlink((b) => !b), 530);
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <span className={className}>
-      {displayed}
-      <span className="text-primary ml-0.5" style={{ opacity: blink ? 1 : 0 }}>|</span>
-    </span>
-  );
-};
+import { Typewriter } from "./Typewriter";
 
 export const Hero = () => {
   return (
     <section
       id="top"
-      className="relative flex min-h-[90vh] flex-col justify-center overflow-hidden bg-hero-gradient pt-32 pb-20 sm:pt-40 sm:pb-28"
+      className="relative flex min-h-[90vh] flex-col justify-center overflow-hidden pt-20 pb-15 sm:pt-10 sm:pb-10"
     >
       <FallingPattern
-        color="rgba(56, 189, 248, 0.35)"
+        color="rgba(38, 60, 55, 0.2)"
         duration={100}
         blurIntensity="0.5rem"
         density={2}
       />
 
-      <div className="mx-auto flex max-w-4xl flex-col items-center px-4 text-center">
+      <div className="portfolio-section-container flex flex-col items-center text-center">
         <div className="relative z-10 flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium text-muted-foreground shadow-soft backdrop-blur"
+            className="glass-panel inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-muted-foreground shadow-sm"
           >
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
@@ -77,17 +39,16 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.05 }}
-            className="mt-5 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-8xl"
+            className="mt-8 text-5xl font-bold leading-[1.05] tracking-tighter sm:text-7xl lg:text-9xl"
           >
-            {profile.name.split(" ")[0]}{" "}
-            <span className="text-gradient">{profile.name.split(" ")[1] + " " + profile.name.split(" ")[2]}</span>
+            <span className="text-gradient">Hi, I'm Ali</span>
           </motion.h1>
 
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="mt-4 min-h-[1.5em] text-lg font-medium text-foreground/80 sm:text-2xl"
+            className="mt-6 min-h-[1.5em] text-lg font-medium text-foreground/70 sm:text-2xl"
           >
             <Typewriter
               phrases={[
@@ -103,12 +64,12 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.35 }}
-            className="mt-10 flex flex-wrap items-center justify-center gap-4"
+            className="mt-12 flex flex-wrap items-center justify-center gap-4"
           >
             <Button
               asChild
               size="lg"
-              className="rounded-full bg-foreground text-background shadow-elevated transition-all hover:bg-foreground/90 hover:shadow-glow"
+              className="interactive-button bg-primary text-primary-foreground shadow-elevated"
             >
               <a href="#projects">
                 View Projects
@@ -120,7 +81,7 @@ export const Hero = () => {
               asChild
               size="lg"
               variant="outline"
-              className="rounded-full border-[#b0b0b0]"
+              className="interactive-button border-border bg-transparent"
             >
               <a href="#contact">
                 <Mail className="mr-1.5 h-4 w-4" />
@@ -131,7 +92,7 @@ export const Hero = () => {
             <Button
               asChild
               size="lg"
-              className="rounded-full bg-foreground text-background shadow-elevated transition-all hover:bg-foreground/90 hover:shadow-glow"
+              className="interactive-button bg-secondary text-foreground hover:bg-secondary/80"
             >
               <a href={profile.cvUrl} download>
                 <Download className="mr-1.5 h-4 w-4" />
@@ -142,7 +103,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Elegant Scroll Indicator */}
+
       <motion.div
         className="absolute bottom-10 inset-x-0 flex w-full flex-col items-center justify-center gap-2"
         initial={{ opacity: 0, y: -20 }}

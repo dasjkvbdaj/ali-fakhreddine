@@ -1,14 +1,13 @@
 import { cn } from "@/lib/utils";
-import { PulseGlowText } from "./TextAnimations";
+import { PulseGlowText } from "./PulseGlowText";
 
 interface GlowWordProps {
   children: React.ReactNode;
   className?: string;
-  color?: "primary" | "accent" | "shift";
 }
 
 /**
- * Wraps important keywords with a continuously pulsing golden breath glow.
+ * Wraps important keywords with a subtle breathing animation.
  */
 export const GlowWord = ({
   children,

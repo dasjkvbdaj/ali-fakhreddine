@@ -16,14 +16,14 @@ type FallingPatternProps = React.ComponentProps<'div'> & {
 };
 
 export function FallingPattern({
-  color = 'rgba(56, 189, 248, 0.25)', // Soft blue for dark mode
+  color = 'rgba(56, 189, 248, 0.25)', 
   backgroundColor = 'transparent',
   duration = 150,
   blurIntensity = '0.5em',
   density = 1,
   className,
 }: FallingPatternProps) {
-  // Generate background image style with customizable color
+
   const generateBackgroundImage = () => {
     const patterns = [
       // Reduced patterns for better performance
