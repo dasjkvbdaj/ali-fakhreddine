@@ -1,4 +1,4 @@
-import { navSections } from "@/data/portfolio";
+import { navSections } from "../data/portfolio";
 import { cn } from "@/lib/utils";
 
 interface NavLinksProps {

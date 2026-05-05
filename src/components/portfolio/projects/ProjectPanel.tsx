@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronDown, Github, ExternalLink } from "lucide-react";
-import { type Project } from "@/data/portfolio";
+import { type Project } from "../data/portfolio";
 import { cn } from "@/lib/utils";
 
 interface ProjectPanelProps {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { navSections } from "@/data/portfolio";
+import { navSections } from "@/components/portfolio/data/portfolio";
 
 export const useNavbar = () => {
   const [active, setActive] = useState<string>("about");

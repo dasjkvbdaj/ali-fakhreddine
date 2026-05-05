@@ -3,9 +3,9 @@ import { ArrowRight, Download, Mail, ChevronDown } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { FallingPattern } from "@/components/ui/falling-pattern";
-import { profile } from "@/data/portfolio";
+import { profile } from "@/components/portfolio/data/portfolio";
 
-import { Typewriter } from "./Typewriter";
+import { Typewriter } from "../animations/Typewriter";
 
 export const Hero = () => {
   return (

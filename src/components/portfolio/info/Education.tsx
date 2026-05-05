@@ -1,7 +1,7 @@
-import { Section } from "./Section";
-import { education } from "@/data/portfolio";
+import { Section } from "../layout/Section";
+import { education } from "../data/portfolio";
 import { GraduationCap } from "lucide-react";
-import { TypingText } from "./TypingText";
+import { TypingText } from "../animations/TypingText";
 
 export const Education = () => (
   <Section 

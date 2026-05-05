@@ -1,12 +1,12 @@
-import { Navbar } from "@/components/portfolio/Navbar";
-import { Hero } from "@/components/portfolio/Hero";
-import { About } from "@/components/portfolio/About";
-import { Skills } from "@/components/portfolio/Skills";
-import { Experience } from "@/components/portfolio/Experience";
-import { Projects } from "@/components/portfolio/Projects";
-import { Education } from "@/components/portfolio/Education";
-import { Contact } from "@/components/portfolio/Contact";
-import { SEO } from "@/components/portfolio/SEO";
+import { Navbar } from "@/components/portfolio/navigation/Navbar";
+import { Hero } from "@/components/portfolio/hero/Hero";
+import { About } from "@/components/portfolio/about/About";
+import { Skills } from "@/components/portfolio/info/Skills";
+import { Experience } from "@/components/portfolio/info/Experience";
+import { Projects } from "@/components/portfolio/projects/Projects";
+import { Education } from "@/components/portfolio/info/Education";
+import { Contact } from "@/components/portfolio/contact/Contact";
+import { SEO } from "@/components/portfolio/layout/SEO";
 
 const Index = () => (
   <div className="min-h-screen bg-background text-foreground">

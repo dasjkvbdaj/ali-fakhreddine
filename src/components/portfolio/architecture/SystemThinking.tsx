@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { Section } from "./Section";
+import { Section } from "../layout/Section";
 import { Globe, Cloud, Shield, Server, Database, Zap } from "lucide-react";
-import { GlowWord } from "./GlowWord";
-import { WaveText } from "./WaveText";
+import { GlowWord } from "../animations/GlowWord";
+import { WaveText } from "../animations/WaveText";
 
 const layers = [
   { icon: Globe, name: "Client", desc: "React UI" },

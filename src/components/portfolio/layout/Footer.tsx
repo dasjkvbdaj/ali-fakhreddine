@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Linkedin, Github } from "lucide-react";
-import { profile } from "@/data/portfolio";
-import { GlowWord } from "./GlowWord";
+import { profile } from "../data/portfolio";
+import { GlowWord } from "../animations/GlowWord";
 
 export const Footer = () => {
   return (
@@ -9,7 +9,7 @@ export const Footer = () => {
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4">
         <div className="col-span-1 md:col-span-2">
           <div className="text-xl font-bold tracking-tight text-foreground">
-            {profile.name.split(' ')[0]}<GlowWord color="shift">.</GlowWord>
+            Ali Fakhreddine
           </div>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground leading-relaxed">
             Software Engineer specializing in building exceptional digital experiences.

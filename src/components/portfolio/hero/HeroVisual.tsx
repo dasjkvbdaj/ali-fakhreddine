@@ -9,7 +9,7 @@ import {
   Server,
   Zap
 } from "lucide-react";
-import { OrbitingIcon } from "./OrbitingIcon";
+import { OrbitingIcon } from "../animations/OrbitingIcon";
 
 export const HeroVisual = () => {
   return (

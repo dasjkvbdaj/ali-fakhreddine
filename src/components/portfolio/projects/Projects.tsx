@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Section } from "./Section";
-import { projects } from "@/data/portfolio";
+import { Section } from "../layout/Section";
+import { projects } from "../data/portfolio";
 import { ProjectPanel } from "./ProjectPanel";
 
 export const Projects = () => {

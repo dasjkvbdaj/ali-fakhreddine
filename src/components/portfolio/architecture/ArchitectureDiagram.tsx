@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Server, Database, Globe } from "lucide-react";
 import { ArchitectureNode } from "./ArchitectureNode";
-import { FloatingCodeCard } from "./FloatingCodeCard";
+import { FloatingCodeCard } from "../animations/FloatingCodeCard";
 
 /**
  * Animated Client → API → Database diagram for the hero.

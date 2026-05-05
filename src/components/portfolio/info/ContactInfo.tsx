@@ -1,5 +1,5 @@
 import { Mail, Phone, Linkedin, Github, ArrowUpRight } from "lucide-react";
-import { profile } from "@/data/portfolio";
+import { profile } from "../data/portfolio";
 
 const links = [
   { icon: Mail, label: "Email", value: profile.email, href: `mailto:${profile.email}` },

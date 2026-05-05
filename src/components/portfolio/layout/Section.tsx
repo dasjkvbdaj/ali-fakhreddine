@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Typewriter } from "./Typewriter";
-import { PulseGlowText } from "./PulseGlowText";
+import { Typewriter } from "../animations/Typewriter";
+import { PulseGlowText } from "../animations/PulseGlowText";
 
 export const Section = ({
   id,

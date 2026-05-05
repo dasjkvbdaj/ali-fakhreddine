@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Section } from "./Section";
-import { skills } from "@/data/portfolio";
+import { Section } from "../layout/Section";
+import { skills } from "../data/portfolio";
 import { Code2, Boxes, DatabaseZap, Wrench, Languages as LanguagesIcon } from "lucide-react";
-import { GlowWord } from "./GlowWord";
-import { RotatingWords } from "./RotatingWords";
+import { GlowWord } from "../animations/GlowWord";
+import { RotatingWords } from "../animations/RotatingWords";
 
 const meta: Record<string, { icon: React.ComponentType<{ className?: string }>; tint: string }> = {
   "Programming Languages": { icon: Code2, tint: "from-primary/10 to-primary/0" },

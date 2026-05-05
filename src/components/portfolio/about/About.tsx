@@ -1,7 +1,7 @@
-import { Section } from "./Section";
-import { profile } from "@/data/portfolio";
-import { GlowWord } from "./GlowWord";
-import { PulseGlowText } from "./PulseGlowText";
+import { Section } from "../layout/Section";
+import { profile } from "../data/portfolio";
+import { GlowWord } from "../animations/GlowWord";
+import { PulseGlowText } from "../animations/PulseGlowText";
 
 export const About = () => (
   <Section

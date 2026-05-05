@@ -1,7 +1,7 @@
-import { Section } from "./Section";
-import { ContactInfo } from "./ContactInfo";
+import { Section } from "../layout/Section";
+import { ContactInfo } from "../info/ContactInfo";
 import { ContactForm } from "./ContactForm";
-import { Footer } from "./Footer";
+import { Footer } from "../layout/Footer";
 
 export const Contact = () => {
   return (

@@ -1,9 +1,9 @@
-import { Navbar } from "@/components/portfolio/Navbar";
-import { Section } from "@/components/portfolio/Section";
+import { Navbar } from "@/components/portfolio/navigation/Navbar";
+import { Section } from "@/components/portfolio/layout/Section";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import { SEO } from "@/components/portfolio/SEO";
+import { SEO } from "@/components/portfolio/layout/SEO";
 
 const Terms = () => {
   return (
