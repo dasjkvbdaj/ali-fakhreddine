@@ -27,7 +27,7 @@ export const ContactForm = () => {
                 <FormItem>
                   <FormLabel>First Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="John" {...field} className="bg-background" />
+                    <Input {...field} className="bg-background" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -40,7 +40,7 @@ export const ContactForm = () => {
                 <FormItem>
                   <FormLabel>Last Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Doe" {...field} className="bg-background" />
+                    <Input {...field} className="bg-background" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -55,7 +55,6 @@ export const ContactForm = () => {
                 <FormLabel>Message</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Tell me more about your project..."
                     className="min-h-[150px] resize-none bg-background"
                     {...field}
                   />
