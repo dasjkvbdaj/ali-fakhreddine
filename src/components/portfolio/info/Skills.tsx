@@ -18,15 +18,7 @@ export const Skills = () => (
     id="skills"
     eyebrow="Toolkit"
     title="Technical Skills"
-    description={
-      <>
-        The languages, frameworks, and tools I use to build{" "}
-        <RotatingWords
-          words={["production-grade systems.", "scalable backends.", "reliable APIs.", "high-performance apps."]}
-          className="text-primary font-semibold"
-        />
-      </>
-    }
+    description="The languages, frameworks, and tools I know."
   >
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {Object.entries(skills).map(([category, items], i) => {

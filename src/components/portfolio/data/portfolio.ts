@@ -7,7 +7,7 @@ export const profile = {
   phone: "961 81 905 703",
   github: "https://github.com/dasjkvbdaj",
   linkedin: "https://www.linkedin.com/in/ali-fakhreddine-3369a5312/",
-  cvUrl: "/ali-fakhreddine-cv.pdf",
+  cvUrl: "/Ali Fakhreddine CV.pdf",
   profileImage: "/me.jpg",
 };
 
