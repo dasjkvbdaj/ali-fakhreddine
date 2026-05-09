@@ -80,7 +80,7 @@ export const ProjectPanel = ({
             {project.stack.map((s) => (
               <span
                 key={s}
-                className="rounded-lg border border-border bg-background/50 px-2.5 py-1 text-[10px] font-medium"
+                className="rounded-lg border border-border bg-background/50 px-3.5 py-1.5 text-xs font-medium"
               >
                 {s}
               </span>

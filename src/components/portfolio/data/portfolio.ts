@@ -66,7 +66,7 @@ export const projects: Project[] = [
     stack: ["React", "Tailwind CSS", "emailjs"],
     image: "/projects/portfolio.png",
     github: "https://github.com/dasjkvbdaj/ali-s-system-forge",
-    demo: "https://system-forge-portfolio.vercel.app/",
+    demo: "https://ali-fakhreddine.vercel.app/",
   },
   {
     id: "smart-presence",
@@ -75,7 +75,11 @@ export const projects: Project[] = [
       "Led frontend development using React + MUI, designing interactive dashboards and attendance views. Collaborated with teammates integrating Laravel backend and YOLOv8 + LBPH models for automated face recognition.",
     stack: ["React", "MUI", "CSS", "Laravel", "YOLOv8", "LBPH"],
     image: "/projects/smart-presence.jpg",
-    github: "https://github.com/dasjkvbdaj",
+    github: [
+      { label: "Code 1", url: "https://github.com/Chafic123/Automated-Attendance-System-Backend" },
+      { label: "Code 2", url: "https://github.com/Chafic123/Attendance-Frontend" },
+      { label: "Code 3", url: "https://github.com/Chafic123/Attendance-ML" },
+    ],
     demo: "#",
   },
   {
@@ -86,7 +90,10 @@ export const projects: Project[] = [
     stack: ["React", "Spring Boot", "PostgreSQL", "JWT", "REST API"],
   
     image: "/projects/electrozone.png",
-    github: "https://github.com/dasjkvbdaj/electrozone-e-commerce",
+    github: [
+      { label: "Code 1", url: "https://github.com/dasjkvbdaj/electrozone-e-commerce" },
+      { label: "Code 2", url: "https://github.com/dasjkvbdaj/ElectroZoneBackend" },
+    ],
     demo: "#",
   },
   {
