@@ -105,7 +105,7 @@ export const projects: Project[] = [
    
     image: "/projects/garden-haven.jpg",
     github: "https://github.com/MohammadTarhine/React-Project",
-    demo: "https://react-project-wheat-six.vercel.app/",
+    // demo: "https://react-project-wheat-six.vercel.app/",
   },
   {
     id: "hara-elections",
