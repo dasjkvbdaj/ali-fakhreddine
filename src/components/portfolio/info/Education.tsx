@@ -1,7 +1,6 @@
 import { Section } from "../layout/Section";
 import { education } from "../data/portfolio";
 import { GraduationCap } from "lucide-react";
-import { TypingText } from "../animations/TypingText";
 
 export const Education = () => (
   <Section 

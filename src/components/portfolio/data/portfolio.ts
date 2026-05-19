@@ -8,7 +8,7 @@ export const profile = {
   github: "https://github.com/dasjkvbdaj",
   linkedin: "https://www.linkedin.com/in/ali-fakhreddine-3369a5312/",
   cvUrl: "/Ali Fakhreddine CV.pdf",
-  profileImage: "/me.jpg",
+  profileImage: "/me.webp",
 };
 
 export const skills = {
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     long:
       "A high-performance, professional portfolio website featuring a custom design system, hardware-accelerated animations. Built to demonstrate modern full-stack capabilities with a focus on visual excellence and technical performance.",
     stack: ["React", "Tailwind CSS", "emailjs"],
-    image: "/projects/portfolio.png",
+    image: "/projects/portfolio.webp",
     github: "https://github.com/dasjkvbdaj/ali-s-system-forge",
     demo: "https://ali-fakhreddine.vercel.app/",
   },
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     long:
       "Led frontend development using React + MUI, designing interactive dashboards and attendance views. Collaborated with teammates integrating Laravel backend and YOLOv8 + LBPH models for automated face recognition.",
     stack: ["React", "MUI", "CSS", "Laravel", "YOLOv8", "LBPH"],
-    image: "/projects/smart-presence.jpg",
+    image: "/projects/smart-presence.webp",
     github: [
       { label: "Code 1", url: "https://github.com/Chafic123/Automated-Attendance-System-Backend" },
       { label: "Code 2", url: "https://github.com/Chafic123/Attendance-Frontend" },
@@ -89,7 +89,7 @@ export const projects: Project[] = [
       "Developed a role-based e-commerce system with React (frontend) and Spring Boot (backend), featuring JWT-secured authentication and session management. Built complete CRUD functionality for products, orders, and messaging via PostgreSQL and RESTful APIs.",
     stack: ["React", "Spring Boot", "PostgreSQL", "JWT", "REST API"],
   
-    image: "/projects/electrozone.png",
+    image: "/projects/electrozone.webp",
     github: [
       { label: "Code 1", url: "https://github.com/dasjkvbdaj/electrozone-e-commerce" },
       { label: "Code 2", url: "https://github.com/dasjkvbdaj/ElectroZoneBackend" },
@@ -103,7 +103,7 @@ export const projects: Project[] = [
       "Took primary responsibility for frontend, building responsive layouts with React.js, Firebase authentication, and Supabase integration. Implemented product management, order tracking, and real-time filtering features to improve browsing and user flow.",
     stack: ["React", "Firebase", "Supabase", "CSS"],
    
-    image: "/projects/garden-haven.jpg",
+    image: "/projects/garden-haven.webp",
     github: "https://github.com/MohammadTarhine/React-Project",
     // demo: "https://react-project-wheat-six.vercel.app/",
   },
@@ -114,7 +114,7 @@ export const projects: Project[] = [
       "Built a fully client-side web application using HTML, CSS, and JavaScript for bilingual (Arabic/English) voter data filtering and vote tracking. Integrated Excel data parsing via XLSX.js for dynamic retrieval of registrants.",
     stack: ["HTML", "CSS", "JavaScript", "Excel"],
    
-    image: "/projects/hara-elections.png",
+    image: "/projects/hara-elections.webp",
     github: "https://github.com/dasjkvbdaj/Hara-Elections",
     demo: "https://hara-elections.vercel.app/",
   },
@@ -125,7 +125,7 @@ export const projects: Project[] = [
       "Developed a full-featured bookstore website supporting user registration/login, admin dashboard, and CRUD operations for products and orders. Built shopping cart, checkout, and order management modules.",
     stack: ["PHP", "MySQL", "CSS", "JQuery"],
   
-    image: "/projects/booklify.png",
+    image: "/projects/booklify.webp",
     github: "https://github.com/dasjkvbdaj/Booklify",
     demo: "#",
   },
@@ -136,7 +136,7 @@ export const projects: Project[] = [
       "A modern fragrance e-commerce platform featuring secure role-based authentication, dynamic product listings, and a smooth shopping experience with responsive design and elegant UI animations.",
     stack: ["Next.js", "Tailwind CSS", "Firebase", "Supabase"],
     
-    image: "/projects/waheed-fragrance.png",
+    image: "/projects/waheed-fragrance.webp",
     github: "https://github.com/dasjkvbdaj/waheed-fragrance",
     demo: "https://waheed-fragrance.vercel.app/",
   },
@@ -146,14 +146,14 @@ export const projects: Project[] = [
     long:
       "A visually engaging interior design website showcasing creative projects, built with role-based authentication, interactive animations, and a clean, responsive layout to highlight design portfolios.",
     stack: ["React", "Tailwind CSS", "Firebase", "Cloudinary", "emailjs"],
-    image: "/projects/handasiyan.png",
+    image: "/projects/handasiyan.webp",
     github: "https://github.com/dasjkvbdaj/Handasiyan-Design",
     demo: "https://handasiyan.com/",
   },
 ];
 
 export const navSections = [
-  { id: "top", label: "Home" },
+  { id: "home", label: "Home" },
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
   { id: "education", label: "Education" },

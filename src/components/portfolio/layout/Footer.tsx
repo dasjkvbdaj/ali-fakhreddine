@@ -20,7 +20,7 @@ export const Footer = () => {
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">Links</h4>
           <ul className="mt-4 space-y-2">
-            {["About", "Experience", "Education" ,"Projects", "Skills", "Contact"].map((item) => (
+            {["Home", "About", "Experience", "Education" ,"Projects", "Skills", "Contact"].map((item) => (
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase()}`}

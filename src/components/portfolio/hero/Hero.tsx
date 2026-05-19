@@ -10,7 +10,7 @@ import { Typewriter } from "../animations/Typewriter";
 export const Hero = () => {
   return (
     <section
-      id="top"
+      id="home"
       className="relative flex min-h-[90vh] flex-col justify-center overflow-hidden pt-20 pb-15 sm:pt-10 sm:pb-10"
     >
       <FallingPattern

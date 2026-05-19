@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import { Section } from "../layout/Section";
 import { experience } from "../data/portfolio";
 import { Briefcase } from "lucide-react";
-import { TypingText } from "../animations/TypingText";
-import { GlowWord } from "../animations/GlowWord";
 
 export const Experience = () => (
   <Section

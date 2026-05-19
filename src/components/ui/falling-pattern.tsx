@@ -23,6 +23,16 @@ export function FallingPattern({
   density = 1,
   className,
 }: FallingPatternProps) {
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const generateBackgroundImage = () => {
     const patterns = [
@@ -70,14 +80,14 @@ export function FallingPattern({
             backgroundColor,
             backgroundImage: generateBackgroundImage(),
             backgroundSize: backgroundSizes,
-            willChange: 'background-position',
+            willChange: isMobile ? 'auto' : 'background-position',
           }}
           variants={{
             initial: {
               backgroundPosition: startPositions,
             },
             animate: {
-              backgroundPosition: [startPositions, endPositions],
+              backgroundPosition: isMobile ? startPositions : [startPositions, endPositions],
               transition: {
                 duration: duration,
                 ease: 'linear',
@@ -92,8 +102,8 @@ export function FallingPattern({
       <div
         className="absolute inset-0 z-1"
         style={{
-          backdropFilter: `blur(${blurIntensity})`,
-          WebkitBackdropFilter: `blur(${blurIntensity})`,
+          backdropFilter: isMobile ? 'none' : `blur(${blurIntensity})`,
+          WebkitBackdropFilter: isMobile ? 'none' : `blur(${blurIntensity})`,
           backgroundImage: backgroundColor !== 'transparent' ? `radial-gradient(circle at 50% 50%, transparent 0, transparent 2px, ${backgroundColor} 2px)` : 'none',
           backgroundSize: `${8 * density}px ${8 * density}px`,
           maskImage: 'radial-gradient(ellipse at top center, black, transparent 80%)',
