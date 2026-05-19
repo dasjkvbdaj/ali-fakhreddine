@@ -1,6 +1,8 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { PulseGlowText } from "../animations/PulseGlowText";
+import { Typewriter } from "../animations/Typewriter";
 
 export const Section = ({
   id,
@@ -20,6 +22,17 @@ export const Section = ({
   level?: "h1" | "h2";
 }) => {
   const HeadingTag = level || "h2";
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section
       id={id}
@@ -41,7 +54,13 @@ export const Section = ({
           )}
 
           <HeadingTag className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-            {title}
+            {isMobile ? (
+              title
+            ) : typeof title === "string" ? (
+              <Typewriter phrases={[title]} typeSpeed={55} />
+            ) : (
+              title
+            )}
           </HeadingTag>
           {description && (
             <div className="mt-4 text-base text-muted-foreground sm:text-lg max-w-xl">

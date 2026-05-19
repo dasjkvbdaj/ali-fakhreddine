@@ -8,7 +8,7 @@ export const Contact = () => {
     <Section
       id="contact"
       eyebrow="Contact"
-      title="Let's build something."
+      title="Let's build something"
     >
       <div className="portfolio-card sm:p-12">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">

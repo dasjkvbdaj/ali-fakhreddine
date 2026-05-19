@@ -1,11 +1,24 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail, ChevronDown } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { FallingPattern } from "@/components/ui/falling-pattern";
 import { profile } from "@/components/portfolio/data/portfolio";
+import { Typewriter } from "../animations/Typewriter";
 
 export const Hero = () => {
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section
       id="home"
@@ -46,9 +59,20 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="mt-6 text-lg font-medium text-foreground/70 sm:text-2xl"
+            className="mt-6 text-lg font-medium text-foreground/70 sm:text-2xl min-h-[1.5em]"
           >
-            {profile.title}
+            {isMobile ? (
+              profile.title
+            ) : (
+              <Typewriter
+                phrases={[
+                  profile.title,
+                  "Building Digital Experiences.",
+                  "Full Stack Specialist.",
+                  "Solving Complex Problems.",
+                ]}
+              />
+            )}
           </motion.div>
 
           <motion.div
