@@ -5,8 +5,6 @@ import { Button } from "@/components/ui/button";
 import { FallingPattern } from "@/components/ui/falling-pattern";
 import { profile } from "@/components/portfolio/data/portfolio";
 
-import { Typewriter } from "../animations/Typewriter";
-
 export const Hero = () => {
   return (
     <section
@@ -48,16 +46,9 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="mt-6 min-h-[1.5em] text-lg font-medium text-foreground/70 sm:text-2xl"
+            className="mt-6 text-lg font-medium text-foreground/70 sm:text-2xl"
           >
-            <Typewriter
-              phrases={[
-                profile.title,
-                "Building Digital Experiences.",
-                "Full Stack Specialist.",
-                "Solving Complex Problems.",
-              ]}
-            />
+            {profile.title}
           </motion.div>
 
           <motion.div
